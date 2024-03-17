@@ -9,84 +9,55 @@
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{hyperref}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{张志强}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
- 
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+  \email{zhangzhiqiangcs@outlook.com} \textperiodcentered\
+  \phone{(+86) 131-2120-0924} \textperiodcentered\ 
+  \github[zhangzhiqiangcs]{https://github.com/zhangzhiqiangcs}
+} 
+\section{教育经历}
+\datedsubsection{\textbf{南开大学} \quad 软件学院/软件工程，本科}{2012 -- 2016}
+\datedsubsection{\textbf{中科院计算所} \quad 计算机体系结构/区块链，硕士}{2017 -- 2020}
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
-\begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
+\section{工作经历}
+\datedsubsection{\textbf{旷视,北京} \quad 软件工程师}{2020年6月 -- 至今}
+私有云平台1.0(DevOps)
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{私有云平台 DevOps}: 基于 Docker, Supervisor 自研容器编排引擎、集群自动化运维核心功能。在 ToB 领域、私有化、重交付场景中实现标准化交付、自动化运维和最佳实践。是旷视所有私有化项目的基础要素。
+  \item \textbf{交付工具链}: 自定义 OS 发行版，解决 OS 依赖一致性问题；软件包托管，为交付型软件提供授信存储和分发，提高交付效率。
+  \item \textbf{加密授权体系}: 基于 CodeMeter 和 Sentinel 商业产品，构建加密授权平台，为核心产品的安全运行保驾护航。
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
-\begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+私有云平台2.0(MDP)
+\begin{itemize}[parsep=0.5ex]
+  \item 借助云原生技术带来的标准化交付和解耦能力，解决产品在私有化交付时的异构环境适配、部署复杂、持续运维问题。
+  \item 以业务产品为中心，将 MDP 分别为\textbf{在线平台(Online)}和\textbf{本地平台(Local)}。覆盖产品从研发，测试，交付全流程，提供端到端的工具平台，提升交付体验和交付运维能力。
+  \item Online 是面向研发、产品以及交付的平台，提供产品\textbf{编排、发布、部署包管理}等功能
+  \item Local 是面向现场部署和运维的管理控制台，提供\textbf{环境搭建、集群管理、应用程序管理}等功能。
+  \item 提供具有最佳实践的\textbf{基础设施能力}，涵盖基础设施的可观测性、备份恢复、扩缩容等能力。
 \end{itemize}
-\end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
-\begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+\datedsubsection{\textbf{腾讯,实习生,北京}}{2019年6月 -- 2019年8月}
+参与容器云开发组 Ceph 存储服务的开发和维护。
+\begin{itemize}[parsep=0.5ex]
+  \item 熟悉 Ceph 集群的部署和维护，了解其架构和原理。
+  \item 排查线上集群异常问题并提供解决方案。
+  \item 调研 Ceph 社区发布的新型存储后端 \href{https://ceph.io/en/news/blog/2017/new-luminous-bluestore/}{bluestore}, 并在内部环境中进行测试。
 \end{itemize}
-\end{onehalfspacing}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
 
-\section{\faCogs\ IT 技能}
+\section{技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 工作语言主要为 Golang, 熟悉 Python, Shell 脚本语言, 能够使用 Golang+JS+React 进行前后端开发
+  \item 开发平台主要为 Linux, 对服务器端的开发运维、性能调优、故障排查有一定经验
+  \item 持续关注云原生, 容器, eBPF等相关技术
 \end{itemize}
 
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
-
-\section{\faInfo\ 其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
-\end{itemize}
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
