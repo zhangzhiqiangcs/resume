@@ -27,37 +27,44 @@
 
 \section{工作经历}
 \datedsubsection{\textbf{旷视,北京} \quad 软件工程师}{2020年6月 -- 至今}
-私有云平台1.0(DevOps)
+
+
+\textbf{AI PaaS 平台}
 \begin{itemize}[parsep=0.5ex]
-  \item \textbf{私有云平台 DevOps}: 基于 Docker, Supervisor 自研容器编排引擎、集群自动化运维核心功能。在 ToB 领域、私有化、重交付场景中实现标准化交付、自动化运维和最佳实践。是旷视所有私有化项目的基础要素。
-  \item \textbf{交付工具链}: 自定义 OS 发行版，解决 OS 依赖一致性问题；软件包托管，为交付型软件提供授信存储和分发，提高交付效率。
-  \item \textbf{加密授权体系}: 基于 CodeMeter 和 Sentinel 商业产品，构建加密授权平台，为核心产品的安全运行保驾护航。
+  \item 参与 AI PaaS 平台的研发，构建了一个集成算力、算法、智能体管理的统一平台，实现云、边、端的算法统一调度和部署，降低了推理系统的复杂性，提高了推理平台的扩展性。
+  \item AI Paas Gateway 为\textbf{智能体}提供会话管理、历史消息管理功能，支持多种智能体的接入，提供统一的 API 服务。
+  \item 支持多种\textbf{大模型}的托管和推理，基于 vLLM 优化推理流程，并通过 AI PaaS Gateway 提供 OpenAI API 代理，实现高效的模型推理服务，使智能体能够流畅调用，提升对话质量和并发能力。
+  \item 支撑各个BG的业务场景，推动大模型和智能体技术落地，提升了用户体验和智能化水平。
 \end{itemize}
 
-私有云平台2.0(MDP)
+\textbf{私有云平台 MDP}
 \begin{itemize}[parsep=0.5ex]
-  \item 借助云原生技术带来的标准化交付和解耦能力，解决产品在私有化交付时的异构环境适配、部署复杂、持续运维问题。
-  \item 以业务产品为中心，将 MDP 分别为\textbf{在线平台(Online)}和\textbf{本地平台(Local)}。覆盖产品从研发，测试，交付全流程，提供端到端的工具平台，提升交付体验和交付运维能力。
-  \item Online 是面向研发、产品以及交付的平台，提供产品\textbf{编排、发布、部署包管理}等功能
-  \item Local 是面向现场部署和运维的管理控制台，提供\textbf{环境搭建、集群管理、应用程序管理}等功能。
+  \item 基于 Kubekey 设计并实现了一套标准化 Kubernetes 交付方案，简化了异构环境下的集群部署流程，使 Kubernetes 能够在各种环境中快速落地，提高了系统的可维护性和交付效率。
+  \item 构建 Kubernetes 交付平台，集成镜像中心、控制面 HA、监控告警、应用回滚等关键能力。基于 Helm Chart 实现模块化交付，使产品可自由组合组件，简化现场交付流程，提高可复用性和灵活性。
   \item 提供具有最佳实践的\textbf{基础设施能力}，涵盖基础设施的可观测性、备份恢复、扩缩容等能力。
 \end{itemize}
 
-\datedsubsection{\textbf{腾讯,实习生,北京}}{2019年6月 -- 2019年8月}
-参与容器云开发组 Ceph 存储服务的开发和维护。
+\textbf{私有云平台 DevOps}
 \begin{itemize}[parsep=0.5ex]
-  \item 熟悉 Ceph 集群的部署和维护，了解其架构和原理。
-  \item 排查线上集群异常问题并提供解决方案。
-  \item 调研 Ceph 社区发布的新型存储后端 \href{https://ceph.io/en/news/blog/2017/new-luminous-bluestore/}{bluestore}, 并在内部环境中进行测试。
+  \item 基于 Docker, Supervisor 自研容器编排引擎、集群自动化运维核心功能。在 ToB 领域、私有化、重交付场景中实现标准化交付、自动化运维和最佳实践。
+  \item \textbf{包管理器}：自研内部包管理器，包含\textbf{命令行工具}，\textbf{统一制品仓库}，\textbf{控制器}。命令行工具提供依赖解析、配置传递、模板渲染、提交资源的功能。统一制品仓库提供存储、检索、版本管理的能力。控制器监听 apiserver 的资源，调度并部署到 DevOps 平台上。
+  \item \textbf{加密授权体系}: 基于 CodeMeter 和 Sentinel 设计并实现加密授权系统，增强核心产品的安全防护能力，防止未授权使用，并支持灵活的授权管理机制。
+\end{itemize}
+
+\datedsubsection{\textbf{腾讯,容器云开发组,实习生,北京}}{2019年6月 -- 2019年8月}
+\begin{itemize}[parsep=0.5ex]
+  \item 参与 腾讯云容器存储（Ceph 集群） 的开发和维护，优化存储服务的可靠性和性能。
+  \item 排查线上 Ceph 集群异常问题，通过日志分析和 ceph status 监控诊断问题，修复存储节点异常问题，提高系统稳定性。
 \end{itemize}
 
 
 \section{技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 工作语言主要为 Golang, 熟悉 Python, Shell 脚本语言, 能够使用 Golang+JS+React 进行前后端开发
-  \item 开发平台主要为 Linux, 对服务器端的开发运维、性能调优、故障排查有一定经验
-  \item 持续关注云原生, 容器, eBPF等相关技术
+  \item 精通 Golang，熟悉 Python，具备大型分布式系统开发经验。
+  \item 开发平台主要为 Linux，擅长性能调优（profiling、GC 调优），有丰富的线上故障排查经验。
+  \item 深入研究 AI Infra（vLLM、TensorRT），云原生（K8s、Operator、Service Mesh），内核技术（eBPF、cgroup）。
+  \item 持有 Kubernetes CKA 认证，具备 Kubernetes Operator 开发经验，能独立编写 CRD、Controller。
 \end{itemize}
 
 \end{document}
