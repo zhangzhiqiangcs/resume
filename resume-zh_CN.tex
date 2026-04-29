@@ -26,29 +26,34 @@
 \datedsubsection{\textbf{中科院计算所} \quad 计算机体系结构/区块链，硕士}{2017 -- 2020}
 
 \section{工作经历}
-\datedsubsection{\textbf{旷视,北京} \quad 软件工程师}{2020年6月 -- 至今}
+\datedsubsection{\textbf{百度,北京} \quad 软件工程师}{2025年6月 -- 至今}
 
+\textbf{百舸AI计算平台}
+\begin{itemize}[parsep=0.5ex]
+  \item 负责托管资源池 \textbf{GPU 虚拟化与异构调度}能力建设，实现 MIG 队列创建、资源视图展示，支持 A100/A800 混合调度，提升异构算力利用率。
+  \item 主导\textbf{队列资源视图存储与缓存架构优化}：开发 etcd-to-mysql 多集群资源实时同步系统，设计冷热存储分离架构与三级渐进式读取策略，实现调和控制器保障 MySQL 与 K8s 双写一致性；优化资源视图校准逻辑，排除系统预留和系统组件占用，准确展示节点/队列真实可用资源。
+  \item 设计并实现\textbf{闲时任务}功能，支持队列闲时资源出借与闲时任务调度，通过 Volcano 调度器增强抢占和回收机制。
+  \item 负责 \textbf{Volcano 调度器}组件维护，累计发布 10+ 版本，修复 panic、并发安全等关键问题，新增物理队列污点容忍等能力。
+\end{itemize}
+
+\datedsubsection{\textbf{旷视,北京} \quad 软件工程师}{2020年6月 -- 2025年5月}
 
 \textbf{AI PaaS 平台}
 \begin{itemize}[parsep=0.5ex]
-  \item 参与 AI PaaS 平台的研发，构建集成\textbf{算力、算法、智能体}管理的统一平台，实现推理系统的标准化和扩展性；平台设计符合背景安全防范行业协会（北安协）\textbf{中心解析平台}的要求，确保在智慧城市、公共安全等领域的广泛应用。
-  \item 扩展算法管理模块，支持多种\textbf{大模型}的托管和推理，基于 \textbf{vLLM} 优化推理流程，通过 AI PaaS Gateway 提供 OpenAI API 代理，实现高效的模型推理服务。
-  \item 支持多种智能体接入，提供统一 API 服务，实现会话管理、历史消息管理功能，提升对话质量和并发处理能力。
-  \item 适配 Kubernetes 运行环境，实现模型推理任务的弹性调度和负载均衡，提高系统的稳定性和资源利用率。
+  \item 构建 AI PaaS 平台，集成算力、算法、智能体管理，基于 \textbf{vLLM} 优化大模型推理流程，提供 OpenAI API 兼容的推理服务。
+  \item 支持多种智能体接入，实现会话管理、历史消息管理，适配 Kubernetes 实现推理任务弹性调度。
 \end{itemize}
 
 \textbf{私有云平台 MDP}
 \begin{itemize}[parsep=0.5ex]
-  \item 基于 Kubekey 设计并实现标准化 Kubernetes 交付方案，简化异构环境下的集群部署流程，实现 Kubernetes 在多种环境中的快速落地，提升系统可维护性与交付效率。
-  \item 构建 Kubernetes 交付平台，作为公司内部\textbf{软件发布中心}和现场交付的核心能力平台，集成镜像中心、控制面高可用、监控告警、应用回滚等关键能力，支持 Helm Chart 模块化组合与交付；同时建设现场\textbf{集群管理与业务 Dashboard}，实现集群状态可视化、业务监控与运维诊断，提升交付效率与客户体验。
-  \item 提供覆盖\textbf{基础设施}可观测性、备份恢复、弹性扩缩容等能力的基础设施最佳实践，支撑业务快速稳定地落地于私有云架构中。
+  \item 基于 Kubekey 设计 Kubernetes 交付方案，构建公司内部\textbf{软件发布中心}，集成镜像中心、监控告警、Helm Chart 交付等核心能力。
+  \item 建设集群管理与业务 Dashboard，实现集群状态可视化、业务监控与运维诊断，支撑业务快速落地私有云架构。
 \end{itemize}
 
 \textbf{私有云平台 DevOps}
 \begin{itemize}[parsep=0.5ex]
-  \item 基于 Docker 和 Supervisor 自研容器编排引擎、集群自动化运维核心功能。在 ToB 领域、私有化、重交付场景中实现标准化交付、自动化运维和最佳实践。
-  \item \textbf{包管理器}：自研内部包管理器，包含\textbf{命令行工具}，\textbf{统一制品仓库}与\textbf{控制器}组件。命令行工具提供依赖解析、配置传递、模板渲染、提交资源；制品仓库具备版本管理、检索与存储能力；控制器监听 apiserver 的资源，控制器监听 apiserver 资源变更并驱动部署至 DevOps 平台。
-  \item \textbf{加密授权体系}: 基于 CodeMeter 与 Sentinel 设计并实现产品授权机制，提供授权生成、验证与管理能力，有效防止未授权使用，增强核心系统的安全性与商业防护能力。
+  \item 自研容器编排引擎与包管理器，包含命令行工具、制品仓库与控制器，实现 ToB 场景下的标准化交付与自动化运维。
+  \item 基于 CodeMeter 设计产品授权机制，提供授权生成与验证能力，增强系统安全性与商业防护能力。
 \end{itemize}
 
 \datedsubsection{\textbf{腾讯,容器云开发组,实习生,北京}}{2019年6月 -- 2019年8月}
@@ -62,9 +67,9 @@
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 精通 Golang，熟悉 Python，具备大型分布式系统的架构设计与开发经验。
-  \item 熟练使用 Linux 作为主要开发与部署平台，擅长性能优化（Profiling、GC 调优）与线上故障排查。
-  \item 深入研究 \textbf{AI Infra}（vLLM、TensorRT），\textbf{云原生技术}（K8s、Operator、Service Mesh），\textbf{内核技术}（eBPF、cgroup）。
-  \item 持有 Kubernetes CKA 认证，具备 Kubernetes Operator 开发经验，能独立编写 CRD、Controller。
+  \item 深入研究 \textbf{AI Infra}：推理调度（llm-d、GAIE、P/D 分离）、分布式训练（NCCL、RDMA、DeepEP）、GPU 通信（NVLink、拓扑优化）、云原生（Kubernetes、Operator）。
+  \item 熟悉 \textbf{GPU 虚拟化}（MIG、vGPU）与异构混合调度，有生产环境落地经验。
+  \item 熟练使用 Coding Agent 工具（Claude Code）提升研发效率，有 AI 辅助代码生成、文档撰写、问题排查的实践经验。
 \end{itemize}
 
 \end{document}
