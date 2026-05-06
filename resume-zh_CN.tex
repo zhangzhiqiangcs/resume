@@ -30,10 +30,9 @@
 
 \textbf{百舸AI计算平台}
 \begin{itemize}[parsep=0.5ex]
-  \item 负责托管资源池 \textbf{GPU 虚拟化与异构调度}能力建设，实现 MIG 队列创建、资源视图展示，支持 A100/A800 混合调度，提升异构算力利用率。
-  \item 主导\textbf{队列资源视图存储与缓存架构优化}：开发 etcd-to-mysql 多集群资源实时同步系统，设计冷热存储分离架构与三级渐进式读取策略，实现调和控制器保障 MySQL 与 K8s 双写一致性；优化资源视图校准逻辑，排除系统预留和系统组件占用，准确展示节点/队列真实可用资源。
-  \item 设计并实现\textbf{闲时任务}功能，支持队列闲时资源出借与闲时任务调度，通过 Volcano 调度器增强抢占和回收机制。
-  \item 负责 \textbf{Volcano 调度器}组件维护，累计发布 10+ 版本，修复 panic、并发安全等关键问题，新增物理队列污点容忍等能力。
+  \item 负责托管资源池\textbf{队列能力建设}：设计 \textbf{MIG 虚拟化}、多芯\textbf{异构混合调度}、多套餐规格组方案，实现 RDMA/eRDMA 默认使能属性，打破队列对 GPU 型号和规格的限制；设计\textbf{闲时任务}功能，支持队列空闲资源出借与多物理队列间闲时资源共享、抢占回收，提升集群资源利用率。
+  \item 维护 \textbf{Volcano 调度器}，为队列配额调度、抢占回收等提供底层调度能力，累计发布 10+ 版本。
+  \item 主导\textbf{队列资源视图优化}：引入最大可用量视图，排除系统预留和系统组件占用，准确展示节点/队列\textbf{真实可调度资源上限}；开发 etcd-to-mysql 后台汇聚系统，实时汇聚队列内所有节点资源视图并写入缓存，提升资源视图查询性能与实时性。
 \end{itemize}
 
 \datedsubsection{\textbf{旷视,北京} \quad 软件工程师}{2020年6月 -- 2025年5月}
@@ -67,7 +66,7 @@
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 精通 Golang，熟悉 Python，具备大型分布式系统的架构设计与开发经验。
-  \item 深入研究 \textbf{AI Infra}：推理调度（llm-d、GAIE、P/D 分离）、分布式训练（NCCL、RDMA、DeepEP）、GPU 通信（NVLink、拓扑优化）、云原生（Kubernetes、Operator）。
+  \item 深入研究 \textbf{AI Infra}：推理调度（PD分离、kvcache、推理引擎）、分布式训练（NCCL、RDMA、DeepEP）、GPU 通信（NVLink、拓扑优化）、云原生（Kubernetes、Operator）。
   \item 熟悉 \textbf{GPU 虚拟化}（MIG、vGPU）与异构混合调度，有生产环境落地经验。
   \item 熟练使用 Coding Agent 工具（Claude Code）提升研发效率，有 AI 辅助代码生成、文档撰写、问题排查的实践经验。
 \end{itemize}
